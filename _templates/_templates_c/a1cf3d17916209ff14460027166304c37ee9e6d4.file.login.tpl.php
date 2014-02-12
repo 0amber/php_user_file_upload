@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-12 03:16:36
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-12 07:08:50
          compiled from ".\_templates\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2469252f9b8ede2cc41-38497001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a1cf3d17916209ff14460027166304c37ee9e6d4' => 
     array (
       0 => '.\\_templates\\login.tpl',
-      1 => 1392171376,
+      1 => 1392185318,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->getSubTemplate ("./_parts/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <div id="main">
-	<?php echo $_smarty_tpl->tpl_vars['login_error']->value;?>
+	<?php echo (($tmp = @$_smarty_tpl->tpl_vars['login_error']->value)===null||$tmp==='' ? '' : $tmp);?>
 
 	<form action="./login.php" method="post">
 		<p>ユーザー名:<input name="user" type="text" size="40"></p>

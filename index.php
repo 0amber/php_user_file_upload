@@ -10,11 +10,19 @@ require_once('./_libs/UIBase.class.php');
 *
 */
 
+$UIBaseObj = new UIBase();
+$AuthObj = new Auth();
 
-$SessionObj = new Session();
-if(!$SessionObj->verify($_SESSION)) header('Location: login.php');
+
+//セッションユーザ確認
+if (isset($_SESSION['name']) && isset($_SESSION['passwd'])) { 
+	if($AuthObj->user($_SESSION['name'], $_SESSION['passwd'])) {
+		if($AuthObj->admin($_SESSION['name'], $_SESSION['passwd']))
 
 
+		}
+	}
+}
 
 
 $UIBaseObj = new UIBase();

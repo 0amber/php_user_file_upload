@@ -10,10 +10,15 @@ class Session
 {
   
 
+public $name;
+public $passwd;
+
+
+
     //セッション追加
-    public function add($loginfo) {
-        $_SESSION['name'] = $loginfo['name'];
-        $_SESSION['passwd'] =  $lofinfo['passwd']; 
+    public function addUser($name, $passwd) {
+        $_SESSION['name'] = $name;
+        $_SESSION['passwd'] =  $passwd; 
     }
 
     //セッション削除
@@ -25,6 +30,8 @@ class Session
     //セッション確認
     public function verify($session = '') { 
         if (isset($session['name']) && isset($session['passwd'])) { 
+ 
+/*
             //セッションIDを変更
             session_regenerate_id(TRUE);
             //CFRS対策の固定トークンを生成
@@ -34,6 +41,7 @@ class Session
             }
             //トークンをテンプレートに渡す
             $ticket = $_SESSION['ticket'];
+*/
         return true; 
         } else {
         //セッションなし

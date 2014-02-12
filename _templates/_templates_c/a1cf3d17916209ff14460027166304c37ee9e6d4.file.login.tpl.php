@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-12 07:08:50
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-12 08:10:15
          compiled from ".\_templates\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2469252f9b8ede2cc41-38497001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a1cf3d17916209ff14460027166304c37ee9e6d4' => 
     array (
       0 => '.\\_templates\\login.tpl',
-      1 => 1392185318,
+      1 => 1392189010,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<?php echo (($tmp = @$_smarty_tpl->tpl_vars['login_error']->value)===null||$tmp==='' ? '' : $tmp);?>
 
 	<form action="./login.php" method="post">
-		<p>ユーザー名:<input name="user" type="text" size="40"></p>
+		<p>ユーザー名:<input name="name" type="text" size="40"></p>
 		<p>パスワード:<input name="passwd" type="text" size="40"></p>
 		<p><input type="submit" value="ログイン"></p>
 	</form>

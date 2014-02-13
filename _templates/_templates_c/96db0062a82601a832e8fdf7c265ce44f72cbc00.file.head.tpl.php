@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-11 06:56:52
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-13 09:36:06
          compiled from "C:\xampp\htdocs\subconfiles\_templates\_parts\head.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2522052f9bb10a2a7b2-38499208%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '96db0062a82601a832e8fdf7c265ce44f72cbc00' => 
     array (
       0 => 'C:\\xampp\\htdocs\\subconfiles\\_templates\\_parts\\head.tpl',
-      1 => 1392098210,
+      1 => 1392280564,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../_templates/_css/style.css">
 	<title>DAISHIN UPLOAD FILE SYSTEM v0.0.2</title>
 </head>
 <?php }} ?>

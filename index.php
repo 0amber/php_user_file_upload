@@ -19,6 +19,7 @@ if(!($user = $AuthObj->userVerify($_SESSION['name'], $_SESSION['passwd'], $_SESS
 //ユーザ別ファイル取得
 	$FileObj = new File();	
 	$UIBaseObj->assign("files", $FileObj->listUserfiles($user));
+	$UIBaseObj->assign("user", $user);
 }
 
 $UIBaseObj->display("index.tpl");

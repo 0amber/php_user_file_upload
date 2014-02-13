@@ -15,11 +15,12 @@ class UIBase extends Smarty
         parent::__construct();
         $this->template_dir = "./_templates/";
         $this->compile_dir = "./_templates/_templates_c/";
-        $this->debugging = true;
+        $this->config_dir = "./_configs/";
+        $this->debugging = false;
     }
   
   
 
 }
   
-?>
+?>server.key -out csr.pem -sha1

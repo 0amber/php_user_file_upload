@@ -1,4 +1,3 @@
-
 {include file="./_parts/head.tpl"}
 {include file="./_parts/header.tpl"}
 <div id="main">

@@ -8,7 +8,7 @@
   
 class File
 {
-  
+
 /*
     public function listUserfiles($user) 
     {
@@ -23,6 +23,7 @@ class File
         $dir = './_files' . $user['filedir'];
         if (is_dir($dir)) {
             if ($dh = opendir($dir)) {
+                $filedir = '';
                 while (($file = readdir($dh)) !== false) {
                     if ($file != "." && $file != "..") {
                         $filedir[] = "$file";

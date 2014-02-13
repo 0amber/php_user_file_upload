@@ -9,18 +9,34 @@ require_once('./_libs/DB.class.php');
   
 class Auth extends DB
 {
-  
-    public function user($name, $passwd) {
+    //ログイン認証  
+    public function userLogin($post_name, $post_passwd) {
 
         $this->connect();
         $sql = sprintf('SELECT * FROM users WHERE name="%s" AND passwd="%s"',
-                mysql_real_escape_string($name),
-                mysql_real_escape_string($passwd)
+                mysql_real_escape_string($post_name),
+                mysql_real_escape_string($post_passwd)
         );
         $record = mysql_query($sql) or die(mysql_error());
-        $table = mysql_fetch_assoc($record);
-        return $table;
+        $user = mysql_fetch_assoc($record);
+        return $user;
     }
+
+
+    //管理者認証
+    public function userVerify($session_name, $session_passwd, $session_filedir) {
+        $this->connect();
+        $sql = sprintf('SELECT * FROM users WHERE name="%s" AND passwd="%s" AND filedir="%s"',
+                mysql_real_escape_string($session_name),
+                mysql_real_escape_string($session_passwd),
+                mysql_real_escape_string($session_filedir)                
+        );
+        $record = mysql_query($sql) or die(mysql_error());
+        $user = mysql_fetch_assoc($record);
+        return $user;
+
+    }
+
 
 }
 /*

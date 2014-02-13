@@ -9,7 +9,34 @@
 class File
 {
   
-  
+/*
+    public function listUserfiles($user) 
+    {
+        $dir = dirname(__FILE__) . '../_files' . $user['filedir'];
+        $dir_userfiles = scandir($dir);
+    return $dir_userfiles;
+    }
+*/
+
+    public function listUserfiles($user) 
+    {
+        $dir = './_files' . $user['filedir'];
+        if (is_dir($dir)) {
+            if ($dh = opendir($dir)) {
+                while (($file = readdir($dh)) !== false) {
+                    if ($file != "." && $file != "..") {
+                        $filedir[] = "$file";
+                    }
+                }
+                closedir($dh);
+            }
+        }
+    return $filedir;
+    }
+
+
+
+
     public function extractAll($config)
     {
         foreach ($config['files'] as $key => $val) {

@@ -15,15 +15,15 @@ $AuthObj = new Auth();
 
 
 //セッションユーザ確認
-if (isset($_SESSION['name']) && isset($_SESSION['passwd'])) { 
+if (isset($_SESSION['name']) && isset($_SESSION['passwd']) && isset($_SESSION['filedir'])) { 
 	if($AuthObj->user($_SESSION['name'], $_SESSION['passwd'])) header('Location: index.php');
 }
 
 //ログイン
 if (isset($_POST['name']) && isset($_POST['passwd'])) { 
-	if ($user = $AuthObj->user($_POST['name'], $_POST['passwd'])) {
+	if ($user = $AuthObj->userLogin($_POST['name'], $_POST['passwd'])) {
 		$SessionObj = new Session();
-		$SessionObj->addUser($user['name'], $user['passwd']);
+		$SessionObj->addUser($user);
 		header('Location: index.php');
 	} else {
 		//入力エラー

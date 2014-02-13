@@ -16,9 +16,12 @@ public $passwd;
 
 
     //セッション追加
-    public function addUser($name, $passwd) {
-        $_SESSION['name'] = $name;
-        $_SESSION['passwd'] =  $passwd; 
+    public function addUser($user) {
+        $_SESSION['name'] = $user['name'];
+        $_SESSION['passwd'] = $user['passwd']; 
+        $_SESSION['filedir'] = $user['filedir']; 
+
+
     }
 
     //セッション削除
@@ -26,31 +29,9 @@ public $passwd;
         $_SESSION = array();
         session_destroy();
     }
-
-    //セッション確認
-    public function verify($session = '') { 
-        if (isset($session['name']) && isset($session['passwd'])) { 
  
-/*
-            //セッションIDを変更
-            session_regenerate_id(TRUE);
-            //CFRS対策の固定トークンを生成
-            if (!isset($_SESSION['ticket'])) {
-            //セッション変数に固定トークンを代入
-                $_SESSION['ticket'] = sha1(uniqid(mt_rand(), TRUE));
-            }
-            //トークンをテンプレートに渡す
-            $ticket = $_SESSION['ticket'];
-*/
-        return true; 
-        } else {
-        //セッションなし
-        return false;         
-        }
-    }
 
-}
-/*
+
     // 入力値に不正なデータがないかなどをチェックする関数
     function checkInput($var) {
         if (is_array($var)) {
@@ -146,5 +127,5 @@ public $passwd;
         closedir($handle);
     }
 }
-  */
+
 ?> 

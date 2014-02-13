@@ -1,10 +1,10 @@
-<h1>index.phpのtemp</h1>
-
-<h1>test conf_files.ini</h1>
-
-<p>
- {$conf_files['name']} </br>
- {$conf_files['passwd']} </br>
- {$conf_files['filedir']} </br>
-<p>
-
+{include file="./_parts/head.tpl"}
+{include file="./_parts/header.tpl"}
+<div>
+	<ul>
+{foreach from=$files item=file}
+		<li>{$file}</li>
+{/foreach}
+	</ul>
+</div>
+{include file="./_parts/footer.tpl"}

@@ -12,8 +12,6 @@ $UIBaseObj = new UIBase();
 $SessionObj = new Session();
 $SessionObj->delete();
 
-
-
 $UIBaseObj->display("logout.tpl");
 
 ?> 

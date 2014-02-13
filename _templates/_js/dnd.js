@@ -69,7 +69,7 @@ function createStatusbar(obj)
 
 function sendFileToServer(formData,status)
 {
-    var uploadURL ="./upload.php"; //Upload URL
+    var uploadURL ="../dnd.php"; //Upload URL
     var extraData ={}; //Extra Data.
     var jqXHR=$.ajax({
             xhr: function() {

@@ -26,6 +26,9 @@ if(!($user = $AuthObj->userVerify($_SESSION['name'], $_SESSION['passwd'], $_SESS
 
 $UIBaseObj->display("upload.tpl");
 
+
+var_dump($_FILES);
+
 /*
 
 if (!isset($request['auth'])) exit;

@@ -37,6 +37,24 @@ class File
 
 
 
+    private function downloadCad($filedir, $download) 
+    {
+        $file = dirname(__FILE__) . "/../_file//$download";
+        $file_name = "$download";
+        $app_type = preg_replace('/.+\./', '',$file_name);
+        $file_size = filesize($file);
+        header('Content-Description: File Transfer'); 
+        header ("Content-Disposition: attachment; filename=$file_name");
+        header ("Content-Type: text/plain");
+        header ("Content-Length: ".$file_size);
+        header('Content-Transfer-Encoding: binary');
+        ob_clean();
+        flush();
+        readfile($file);
+    } 
+
+
+
 
     public function extractAll($config)
     {

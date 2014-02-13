@@ -16,7 +16,7 @@ $AuthObj = new Auth();
 
 //セッションユーザ確認
 if (isset($_SESSION['name']) && isset($_SESSION['passwd']) && isset($_SESSION['filedir'])) { 
-	if($AuthObj->user($_SESSION['name'], $_SESSION['passwd'])) header('Location: index.php');
+	if($AuthObj->userVerify($_SESSION['name'], $_SESSION['passwd'], $_SESSION['filedir'])) header('Location: index.php');
 }
 
 //ログイン

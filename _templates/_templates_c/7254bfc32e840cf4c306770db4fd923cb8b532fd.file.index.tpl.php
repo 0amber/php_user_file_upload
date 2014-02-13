@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-13 05:49:28
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-13 06:07:56
          compiled from ".\_templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1131352f983473bb064-58031734%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7254bfc32e840cf4c306770db4fd923cb8b532fd' => 
     array (
       0 => '.\\_templates\\index.tpl',
-      1 => 1392266965,
+      1 => 1392268072,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['file']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['file']->_loop = true;
 ?>
 		<li><?php echo $_smarty_tpl->tpl_vars['file']->value;?>
-</li>
+ url: <a href="<?php echo $_SERVER['SERVER_NAME'];?>
+<?php echo $_smarty_tpl->tpl_vars['file']->value;?>
+">click me</a></li>
 <?php } ?>
 	</ul>
 </div>

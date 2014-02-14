@@ -60,10 +60,10 @@ class Mail
       }
    }
 
-    public function createuploadMsg($config_mail, $name)
+    public function createuploadMsg($config_mail, $name, $file_name)
     {
   
-        $manageMsg['body'] = $name . "様からデータがアップロードされました。";
+        $manageMsg['body'] = $name . "様から" . $file_name ."データがアップロードされました。";
         $manageMsg['subject'] = $config_mail['message_subject_manage'];
         $manageMsg['email_to'] = $config_mail['email_manage_receiver'];
         $manageMsg['email_from'] = $config_mail['email_manage_sender'];

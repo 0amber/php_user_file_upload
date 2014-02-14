@@ -18,7 +18,7 @@ class Config
     }
   
     //メール設定ファイル取出し
-    public function extractMail()
+    public function extractMailsettings()
     {
         $conf_mail_settings = parse_ini_file('./_configs/mailsettings.ini', true);
         return $conf_mail_settings;

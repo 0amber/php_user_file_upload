@@ -1,14 +1,15 @@
 <?php
 require_once ('./_libs/PHPMailer.class.php');
   
-  
+
+
 /**
 *
 *メール送信クラス
 *
 */
   
-class Mailer
+class Mail
 {
   const INTERNAL_ENCODING = 'UTF-8';
   const INTERNAL_LANGUAGE = 'japanese';
@@ -58,7 +59,19 @@ class Mailer
         echo("メールが送信できませんでした。エラー:".$mail->ErrorInfo);
       }
    }
+
+    public function createuploadMsg($config_mail, $name)
+    {
   
+        $manageMsg['body'] = $name . "様からデータがアップロードされました。";
+        $manageMsg['subject'] = $config_mail['message_subject_manage'];
+        $manageMsg['email_to'] = $config_mail['email_manage_receiver'];
+        $manageMsg['email_from'] = $config_mail['email_manage_sender'];
+        $manageMsg['email_from_name'] = $config_mail['email_manage_name'];
+  
+        return $manageMsg;
+    }
+
 }
   
   

@@ -1,32 +1,19 @@
 <?php 
 session_start();
-$output_dir = './_files';
+require_once('./_libs/Mail.class.php');
+require_once('./_libs/Config.class.php');
 
 
-var_dump($_FILES);
+    //ファイルアップ完了後、メール送信
+    $MailObj = new Mail();
+    $ConfObj = new Config();
+ 
+    $uploadMailMsg = $MailObj->createuploadMsg($ConfObj->extractMailsettings(), $_SESSION['name']);
 
-var_dump($_SESSION);
-
-
-
-if(isset($_FILES["file"]))
-{
-//Filter the file types , if you want.
-if ($_FILES["file"]["error"] > 0)
-{
-echo "Error: " . $_FILES["file"]["error"] . "
-";
-}
-else
-{
-move_uploaded_file($_FILES["file"]["tmp_name"], $output_dir . $_SESSION['filedir'] . $_FILES["file"]["name"]);
-/*
-echo $_FILES["file"]["tmp_name"];
-echo "\r\n";
-echo $output_dir . $_SESSION['filedir'] . $_FILES["file"]["name"];
-*/
-echo "Uploaded File :".$_FILES["file"]["name"];
-}
-
-}
+    if (!$MailObj->send($uploadMailMsg)) {
+        //送信失敗の場合はエラー
+        echo "sucess: 送信にエラーがありました。";
+    } else {
+        echo "sucess: 送信完了";
+    }
 ?>

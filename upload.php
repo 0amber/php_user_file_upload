@@ -22,12 +22,14 @@ if(!($user = $AuthObj->userVerify($_SESSION['name'], $_SESSION['passwd'], $_SESS
     $FileObj = new File();  
     $UIBaseObj->assign("files", $FileObj->listUserfiles($user));
     $UIBaseObj->assign("user", $user);
+
 }
 
 $UIBaseObj->display("upload.tpl");
 
 
-var_dump($_FILES);
+
+
 
 /*
 

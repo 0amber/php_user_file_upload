@@ -5,7 +5,7 @@ require_once('./_libs/Auth.class.php');
 require_once('./_libs/UIBase.class.php');
 /**
 *
-*indexクラス
+*indexコントローラー
 *
 */
 $UIBaseObj = new UIBase();

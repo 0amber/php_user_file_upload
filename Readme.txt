@@ -1,6 +1,6 @@
 /*******************************
-*協力会社ファイルアップロードシステム
-*version 0.0.2
+*ユーザーファイルアップロードシステム
+*version 0.0.1
 *
 *******************************/
 
@@ -14,10 +14,11 @@
 
 subconfiles/
 
-	index.php /**/
+	index.php /
 	login.php
 	upload.php
 	error.php
+       dnd.php 
 
 	_config/
 		defaults.ini

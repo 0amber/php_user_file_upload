@@ -27,8 +27,7 @@ if (isset($_POST['name']) && isset($_POST['passwd'])) {
 		header('Location: index.php');
 	} else {
 		//入力エラー
-		$error_login = 'error login';
-		$UIBaseObj->assign("error_login", $error_login);
+		$UIBaseObj->assign("error_login", 'ログインエラー');
 	}
 }
 

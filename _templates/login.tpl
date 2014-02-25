@@ -1,10 +1,11 @@
 {include file="./_parts/head.tpl"}
 {include file="./_parts/header.tpl"}
-<div id="main">
+<div id="main" style="min-height:150px; padding:50px;">
+	{$logout_confirm|default:''}
 	{$login_error|default:''}
 	<form action="./login.php" method="post">
 		<p>ユーザー名:<input name="name" type="text" size="40"></p>
-		<p>パスワード:<input name="passwd" type="text" size="40"></p>
+		<p>パスワード:<input name="passwd" type="password" size="40"></p>
 		<p><input type="submit" value="ログイン"></p>
 	</form>
 </div>

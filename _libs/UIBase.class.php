@@ -22,4 +22,4 @@ class UIBase extends Smarty
 
 }
   
-?>server.key -out csr.pem -sha1
+?>

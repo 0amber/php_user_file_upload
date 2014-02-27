@@ -5,7 +5,8 @@ require_once('./_libs/Auth.class.php');
 require_once('./_libs/UIBase.class.php');
 /**
 *
-*indexクラス
+*ファイル一覧表示「
+*indexコントローラー
 *
 */
 $UIBaseObj = new UIBase();
@@ -16,8 +17,8 @@ if (!isset($_SESSION['name']) || !isset($_SESSION['passwd']) || !isset($_SESSION
 if(!($user = $AuthObj->userVerify($_SESSION['name'], $_SESSION['passwd'], $_SESSION['filedir']))) {
 	header('Location: login.php');
 } else {
-//ユーザ別ファイル取得
-	$FileObj = new File();	
+//ユーザ別ファイル一覧取得
+	$FileObj = new File();	  
 	$UIBaseObj->assign("files", $FileObj->listUserfiles($user));
 	$UIBaseObj->assign("user", $user);
 }

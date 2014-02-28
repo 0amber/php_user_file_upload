@@ -13,6 +13,7 @@
 </div>
 <div id="inputuploadimage" style="margin-left:200px; margin-bottom:15px;">
     <input type="file" multiple="multiple" name="uploadFiles" id="upload-input" />
+    <input type="hidden" name="MAX_FILE_SIZE" value="400000" />
 </div>
 <p><a href="./index.php" class="button big icon log">一覧表示に戻る</a></p>
 <p><a href="./logout.php" class="button big icon unlock">ログアウトする</a></p>

@@ -6,7 +6,7 @@
 <script src="./_templates/_js/dnd.js"></script>
 <h3>{$user.name}様ファイルアップロード</h3>
 <div id="dragandrophandler" style="margin-left:200px; padding:50px; text-align: center;">
-    <p>ここにファイルをドラッグアンドドロップ<br>もしくは<br>ファイル選択ボタンをクリックして下さい<br>(１データ最大転送量2MBまで)
+    <p>ここにファイルをドラッグアンドドロップ<br>もしくは<br>ファイル選択ボタンをクリックして下さい<br>(１データ最大転送量4MBまで)
     </p>
 
 

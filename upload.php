@@ -11,7 +11,7 @@ require_once('./_libs/Mail.class.php');
 ***/
 $UIBaseObj = new UIBase();
 $AuthObj = new Auth();
-  
+
 
 //セッションユーザ確認
 if (!isset($_SESSION['name']) || !isset($_SESSION['passwd']) || !isset($_SESSION['filedir'])) header('Location: login.php');

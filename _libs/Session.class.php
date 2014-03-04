@@ -17,11 +17,10 @@ public $passwd;
 
     //セッション追加
     public function addUser($user) {
+        $_SESSION['id'] = $user['id'];        
         $_SESSION['name'] = $user['name'];
         $_SESSION['passwd'] = $user['passwd']; 
         $_SESSION['filedir'] = $user['filedir']; 
-
-
     }
 
     //セッション削除

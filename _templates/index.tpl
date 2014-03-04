@@ -17,6 +17,7 @@
 	</div>
 </div>
 <p><a href="./upload.php" class="button big icon add">ファイルをアップロードする</a></p>
-<p><a href="./logout.php" class="button big icon unlock">ログアウトする</a></p>
+<p><a href="./uprecord.php" class="button big icon mail">送信履歴見る</a></p>
+<p><a href="./logout.php" class="button danger big icon unlock">ログアウトする</a></p>
 
 {include file="./_parts/footer.tpl"}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-27 09:19:02
+<?php /* Smarty version Smarty-3.1.16, created on 2014-03-03 08:38:48
          compiled from ".\_templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10535530ef4f6f30690-84164762%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7254bfc32e840cf4c306770db4fd923cb8b532fd' => 
     array (
       0 => '.\\_templates\\index.tpl',
-      1 => 1393482488,
+      1 => 1393832323,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.16',
+  'unifunc' => 'content_530ef4f7030923_72084395',
   'variables' => 
   array (
     'user' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'file' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.16',
-  'unifunc' => 'content_530ef4f7030923_72084395',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_530ef4f7030923_72084395')) {function content_530ef4f7030923_72084395($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("./_parts/head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -55,7 +55,8 @@ $_smarty_tpl->tpl_vars['file']->_loop = true;
 	</div>
 </div>
 <p><a href="./upload.php" class="button big icon add">ファイルをアップロードする</a></p>
-<p><a href="./logout.php" class="button big icon unlock">ログアウトする</a></p>
+<p><a href="./uprecord.php" class="button big icon mail">送信履歴見る</a></p>
+<p><a href="./logout.php" class="button danger big icon unlock">ログアウトする</a></p>
 
 <?php echo $_smarty_tpl->getSubTemplate ("./_parts/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

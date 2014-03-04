@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-28 03:31:20
+<?php /* Smarty version Smarty-3.1.16, created on 2014-03-03 05:25:15
          compiled from "C:\xampp\htdocs\subconfiles\_templates\_parts\head.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4392530ef49ac78092-31976668%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '96db0062a82601a832e8fdf7c265ce44f72cbc00' => 
     array (
       0 => 'C:\\xampp\\htdocs\\subconfiles\\_templates\\_parts\\head.tpl',
-      1 => 1393554284,
+      1 => 1393820710,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_530ef49ac7bf17_39441738')) {function content_530ef49ac7bf17_39441738($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="ja">
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../../_templates/_css/style.css">
 	<link rel="stylesheet" type="text/css" href="../../_templates/_css/gh-buttons.css">
